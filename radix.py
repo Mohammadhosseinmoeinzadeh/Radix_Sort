@@ -30,6 +30,9 @@ def counting_sort(arr, exp):
 
     for i in range(n):
         index = (arr[i][0] // exp) % 10
+        #If we want to perform the comparison operation from the desired house, you must enter the desired number instead of [0].
+        #If we want to reverse the comparison operation, we must subtract the number 9 in the expression (arr[i][0] // exp) % 10
+        #for Example: 9-((arr[i][0] // exp) % 10)
         count[index] += 1
 
     for i in range(1, 10):
@@ -38,6 +41,9 @@ def counting_sort(arr, exp):
     i = n - 1
     while i >= 0:
         index = (arr[i][0] // exp) % 10
+        #If we want to perform the comparison operation from the desired house, you must enter the desired number instead of [0].
+        #If we want to reverse the comparison operation, we must subtract the number 9 in the expression (arr[i][0] // exp) % 10
+        #for Example: 9-((arr[i][0] // exp) % 10)
         output[count[index] - 1] = arr[i]
         count[index] -= 1
         i -= 1
